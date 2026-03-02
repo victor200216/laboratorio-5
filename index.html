@@ -3,18 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Atrapa la Estrella - Ky</title>
+  <title>Mata el raton - Ky</title>
   <link rel="stylesheet" href="style.css">
+ 
+  <style>
+    .arena {
+      cursor: url("machete_sin_sa(1).png") 16 16, auto;
+    }
+
+    .star {
+  cursor: url("machete.png") 16 16, pointer;
+}
+  </style>
+
 </head>
+
 <body>
   <!-- Modificar sólo las letras blancas -->
   <div class="game-wrapper">
     <header>
-      <h1 class="glow"> Mata al raton - victor 5.0 — Ky </h1>
+      <h1 class="glow"> Mata al raton - victor 5.0 - </h1>
     </header>
 
     <div class="hud">
-      <div class="panel"> Puntos: <span id="score">0</span></div>
+      <div class="panel"> Vida : <span id="score">20</span></div>
       <div class="panel">⏳ Tiempo: <span id="time">30</span>s</div>
     </div>
 
@@ -31,7 +43,7 @@
   </div>
 
   <!-- Sonidos locales -->
-  <audio id="clickSound" src="click.wav" preload="auto"></audio>
+  <audio id="clickSound" src="Rata.mp3" preload="auto"></audio>
   <audio id="startSound" src="start.wav" preload="auto"></audio>
   <audio id="endSound" src="end.wav" preload="auto"></audio>
 

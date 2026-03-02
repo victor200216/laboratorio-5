@@ -15,7 +15,7 @@ const clickSound = document.getElementById('clickSound');
 const startSound = document.getElementById('startSound');
 const endSound = document.getElementById('endSound');
 
-let score = 0;
+let score = 20;
 let timeLeft = GAME_TIME;
 let running = false;
 let timerInterval = null;
@@ -33,7 +33,7 @@ function moveStar(){
 function startGame(){
   if(running) return;
   running = true;
-  score = 0;
+  score = 20;
   timeLeft = GAME_TIME;
   scoreEl.textContent = score;
   timeEl.textContent = timeLeft;
@@ -60,7 +60,7 @@ function resetGame(){
   running = false;
   clearInterval(timerInterval);
   clearInterval(moveInterval);
-  score = 0;
+  score = 20;
   timeLeft = GAME_TIME;
   scoreEl.textContent = score;
   timeEl.textContent = timeLeft;
@@ -70,7 +70,7 @@ function resetGame(){
 
 star.addEventListener('click', ()=>{
   if(!running) return;
-  score++;
+  score--;
   scoreEl.textContent = score;
   try{ clickSound.currentTime = 0; clickSound.play(); }catch(e){}
   star.style.transform = 'scale(1.35) rotate(18deg)';
